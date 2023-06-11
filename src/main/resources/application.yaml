@@ -7,3 +7,10 @@ spring:
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
 server:
   port: 8085
+
+security:
+  jwt:
+    auth:
+      converter:
+        resource-id: spring-boot-client
+        principal-attribute: preferred_username
